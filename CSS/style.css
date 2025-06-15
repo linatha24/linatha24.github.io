@@ -10,7 +10,6 @@ body {
     background-color: #f5f5f5;
 }
 
-/* === Louis Vuitton Header === */
 .lv-header {
     display: flex;
     justify-content: space-between;
@@ -47,11 +46,10 @@ body {
     color: gray;
 }
 
-/* === Hero Section === */
 .hero-section {
     margin-top: 70px;
     padding: 3rem 2rem;
-    background-color: #bdd1eb;
+    background-color: #66686a;
 }
 
 .hero-container {
@@ -142,7 +140,6 @@ body {
     color: #1b1515;
 }
 
-/* === Footer === */
 footer {
     background-color: #000000;
     color: #fff;
