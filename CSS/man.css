@@ -83,3 +83,7 @@ footer {
   text-align: center;
   padding: 0.5rem 0;
 }
+.dropdown-menu a {
+  color: black !important;        
+  text-decoration: none !important; 
+}
