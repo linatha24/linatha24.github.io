@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container">
-        <!-- Cart Items -->
+        
         <div class="cart-section">
             <div class="cart-header">
                 <h1 class="cart-title">Shopping Cart</h1>
@@ -72,12 +72,12 @@
                         <div class="item-name">Louis Vuitton Sandwich Bag</div>
                     </div>
                     <div class="qty-controls">
-                        <button class="qty-btn" onclick="updateQty(3, -1)">-</button>
+                        <button class="qty-btn" onclick="updateQty(4, -1)">-</button>
                         <span class="qty-display">1</span>
-                        <button class="qty-btn" onclick="updateQty(3, 1)">+</button>
+                        <button class="qty-btn" onclick="updateQty(4, 1)">+</button>
                     </div>
                     <div class="item-price">$1300.00</div>
-                    <span class="remove-btn" onclick="removeItem(3)">×</span>
+                    <span class="remove-btn" onclick="removeItem(4)">×</span>
                 </div>
 
                 <div class="item-row" data-id="5">
@@ -88,12 +88,12 @@
                         <div class="item-name">Bagbag</div>
                     </div>
                     <div class="qty-controls">
-                        <button class="qty-btn" onclick="updateQty(3, -1)">-</button>
+                        <button class="qty-btn" onclick="updateQty(5, -1)">-</button>
                         <span class="qty-display">1</span>
-                        <button class="qty-btn" onclick="updateQty(3, 1)">+</button>
+                        <button class="qty-btn" onclick="updateQty(5, 1)">+</button>
                     </div>
                     <div class="item-price">$2500.00</div>
-                    <span class="remove-btn" onclick="removeItem(3)">×</span>
+                    <span class="remove-btn" onclick="removeItem(5)">×</span>
                 </div>
 
                 <div class="item-row" data-id="6">
@@ -104,12 +104,12 @@
                         <div class="item-name">JACKET WITH FLORAL EMBROIDERY</div>
                     </div>
                     <div class="qty-controls">
-                        <button class="qty-btn" onclick="updateQty(3, -1)">-</button>
+                        <button class="qty-btn" onclick="updateQty(6, -1)">-</button>
                         <span class="qty-display">1</span>
-                        <button class="qty-btn" onclick="updateQty(3, 1)">+</button>
+                        <button class="qty-btn" onclick="updateQty(6, 1)">+</button>
                     </div>
                     <div class="item-price">$1300.00</div>
-                    <span class="remove-btn" onclick="removeItem(3)">×</span>
+                    <span class="remove-btn" onclick="removeItem(6)">×</span>
                 </div>
             </div>
 
@@ -195,7 +195,7 @@
         function updateQty(id, change) {
             const item = items.find(i => i.id === id);
             if (item) {
-                item.qty = Math.max(1, item.qty + change);
+                item.qty = Math.max(0, item.qty + change);
                 updateDisplay();
             }
         }
