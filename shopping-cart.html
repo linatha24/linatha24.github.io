@@ -152,40 +152,6 @@
     </div>
 
     <script src="javascript/cart.js"></script>
-    <script>
-    // Render cart items from localStorage
-    function renderCart() {
-        const cart = window.cartAPI.getCart();
-        const cartItemsDiv = document.getElementById('cart-items');
-        if (!cart || cart.length === 0) {
-            cartItemsDiv.innerHTML = '<div class="empty-cart">Your cart is empty</div>';
-            document.getElementById('item-count').textContent = '0 Items';
-            document.getElementById('items-text').textContent = 'ITEMS 0';
-            document.getElementById('subtotal').textContent = '$0.00';
-            document.getElementById('total').textContent = '$5.00';
-            return;
-        }
-        let html = '';
-        cart.forEach((item, idx) => {
-            html += `<div class=\"item-row\" data-title=\"${item.title}\">\n                <div class=\"item-image\">\n                    <img src=\"${item.image}\" alt=\"${item.title}\">\n                </div>\n                <div class=\"item-details\">\n                    <div class=\"item-name\">${item.title}</div>\n                </div>\n                <div class=\"qty-controls\">\n                    <button class=\"qty-btn\" onclick=\"updateQty('${item.title}', -1)\">-</button>\n                    <span class=\"qty-display\">${item.qty}</span>\n                    <button class=\"qty-btn\" onclick=\"updateQty('${item.title}', 1)\">+</button>\n                </div>\n                <div class=\"item-price\">$${(item.price * item.qty).toFixed(2)}</div>\n                <span class=\"remove-btn\" onclick=\"removeItem('${item.title}')\">×</span>\n            </div>`;
-        });
-        cartItemsDiv.innerHTML = html;
-        document.getElementById('item-count').textContent = `${cart.length} Items`;
-        document.getElementById('items-text').textContent = `ITEMS ${cart.length}`;
-        const subtotal = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
-        document.getElementById('subtotal').textContent = `$${subtotal}.00`;
-        document.getElementById('total').textContent = `$${subtotal + 5}.00`;
-    }
-
-    function updateQty(title, change) {
-        window.cartAPI.updateCartQty(title, change);
-        renderCart();
-    }
-    function removeItem(title) {
-        window.cartAPI.removeFromCart(title);
-        renderCart();
-    }
-    document.addEventListener('DOMContentLoaded', renderCart);
-    </script>
+    <script src="javascript/men-cart.js"></script>
   </body>
 </html>
