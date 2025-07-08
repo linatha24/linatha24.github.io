@@ -1,88 +1,107 @@
 * {
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
 }
 body {
-    background-color: #f9fafb;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+  background-color: #f9fafb;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 .login-container {
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
 }
 .login-form h1 {
-    margin-bottom: 5px;
-    font-size: 28px;
-    font-weight: 700;
+  margin-bottom: 5px;
+  font-size: 28px;
+  font-weight: 700;
 }
 .subtitle {
-    margin-bottom: 25px;
-    color: #6b7280;
-    font-size: 14px;
+  margin-bottom: 25px;
+  color: #6b7280;
+  font-size: 14px;
 }
 label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: 600;
-    font-size: 14px;
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  font-size: 14px;
 }
 input {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 20px;
-    border: 1px solid #d1d5db;
-    border-radius: 8px;
-    font-size: 14px;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
 }
 input:focus {
-    border-color: #2563eb;
-    outline: none;
+  border-color: #2563eb;
+  outline: none;
 }
 .forgot a {
-    color: #2563eb;
-    font-size: 13px;
-    text-decoration: none;
+  color: #2563eb;
+  font-size: 13px;
+  text-decoration: none;
 }
 .login-btn {
-    width: 100%;
-    padding: 12px;
-    background-color: #111827;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  width: 100%;
+  padding: 12px;
+  background-color: #111827;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 .login-btn:hover {
-    background-color: #1f2937;
+  background-color: #1f2937;
 }
 divider {
-    text-align: center;
-    margin: 20px 0;
-    color: #9ca3af;
-    font-size: 14px;
+  text-align: center;
+  margin: 20px 0;
+  color: #9ca3af;
+  font-size: 14px;
 }
 .google-btn {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #d1d5db;
-    border-radius: 8px;
-    font-size: 14px;
-    background-color: #fff;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    transition: background-color 0.2s ease;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background-color 0.2s ease;
+}
+
+/* Responsive Design for Mobile Devices */
+@media (max-width: 480px) {
+  .login-container {
+    padding: 15px;
+    max-width: 95vw;
+  }
+  .login-form h1 {
+    font-size: 1.2rem;
+  }
+  .subtitle {
+    font-size: 12px;
+  }
+  .login-btn,
+  .google-btn {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
 }

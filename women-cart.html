@@ -1,244 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shopping Cart</title>
-    <link rel="stylesheet" href="CSS/shopping-cart.css">
-</head>
-<body>
+    <link rel="stylesheet" href="CSS/shopping-cart.css" />
+  </head>
+  <body>
     <div class="container">
-        
-        <div class="cart-section">
-            <div class="cart-header">
-                <h1 class="cart-title">Shopping Cart</h1>
-                <span class="item-count" id="item-count">3 Items</span>
-            </div>
-
-            <div class="cart-items" id="cart-items">
-                <div class="item-row" data-id="1">
-                    <div class="item-image">
-                        <img src="images/women-p8.jpg" alt="women1">
-                    </div>
-                    <div class="item-details">
-                        <div class="item-name">Wman LV Bag </div>
-                    </div>
-                    <div class="qty-controls">
-                        <button class="qty-btn" onclick="updateQty(1, -1)">-</button>
-                        <span class="qty-display">1</span>
-                        <button class="qty-btn" onclick="updateQty(1, 1)">+</button>
-                    </div>
-                    <div class="item-price">$2400.00</div>
-                    <span class="remove-btn" onclick="removeItem(1)">×</span>
-                </div>
-
-                <div class="item-row" data-id="2">
-                    <div class="item-image">
-                        <img src="images/women-p2.jpg" alt="women2">
-                    </div>
-                    <div class="item-details">
-                        <div class="item-name">All Ready To Wear Collection for Women</div>
-                    </div>
-                    <div class="qty-controls">
-                        <button class="qty-btn" onclick="updateQty(2, -1)">-</button>
-                        <span class="qty-display">1</span>
-                        <button class="qty-btn" onclick="updateQty(2, 1)">+</button>
-                    </div>
-                    <div class="item-price">$3200.00</div>
-                    <span class="remove-btn" onclick="removeItem(2)">×</span>
-                </div>
-
-                <div class="item-row" data-id="3">
-                    <div class="item-image">
-                        <img src="images/women-p3.jpg" alt="women3">
-                    </div>
-                    <div class="item-details">
-                        <div class="item-name">Canvas</div>
-                    </div>
-                    <div class="qty-controls">
-                        <button class="qty-btn" onclick="updateQty(3, -1)">-</button>
-                        <span class="qty-display">1</span>
-                        <button class="qty-btn" onclick="updateQty(3, 1)">+</button>
-                    </div>
-                    <div class="item-price">$2310.00</div>
-                    <span class="remove-btn" onclick="removeItem(3)">×</span>
-                </div>
-
-                <div class="item-row" data-id="4">
-                    <div class="item-image">
-                        <img src="images/women-p4.jpg" alt="women4">
-                    </div>
-                    <div class="item-details">
-                        <div class="item-name">Monogram Towling Jogging Pants</div>
-                    </div>
-                    <div class="qty-controls">
-                        <button class="qty-btn" onclick="updateQty(4, -1)">-</button>
-                        <span class="qty-display">1</span>
-                        <button class="qty-btn" onclick="updateQty(4, 1)">+</button>
-                    </div>
-                    <div class="item-price">$1300.00</div>
-                    <span class="remove-btn" onclick="removeItem(4)">×</span>
-                </div>
-
-                <div class="item-row" data-id="5">
-                    <div class="item-image">
-                        <img src="images/women-p5.jpg" alt="women5">
-                    </div>
-                    <div class="item-details">
-                        <div class="item-name">Louis Vuitton Water Repellent Monogram Parka</div>
-                    </div>
-                    <div class="qty-controls">
-                        <button class="qty-btn" onclick="updateQty(5, -1)">-</button>
-                        <span class="qty-display">1</span>
-                        <button class="qty-btn" onclick="updateQty(5, 1)">+</button>
-                    </div>
-                    <div class="item-price">$2500.00</div>
-                    <span class="remove-btn" onclick="removeItem(5)">×</span>
-                </div>
-
-                <div class="item-row" data-id="6">
-                    <div class="item-image">
-                        <img src="images/women-p6.jpg" alt="women6">
-                    </div>
-                    <div class="item-details">
-                        <div class="item-name">Women LV</div>
-                    </div>
-                    <div class="qty-controls">
-                        <button class="qty-btn" onclick="updateQty(6, -1)">-</button>
-                        <span class="qty-display">1</span>
-                        <button class="qty-btn" onclick="updateQty(6, 1)">+</button>
-                    </div>
-                    <div class="item-price">$1300.00</div>
-                    <span class="remove-btn" onclick="removeItem(6)">×</span>
-                </div>
-            </div>
-
-            <div class="back-btn"><a href="woman-page.html">← Back to shop</a></div>
+      <div class="cart-section">
+        <div class="cart-header">
+          <h1 class="cart-title">Shopping Cart</h1>
+          <span class="item-count" id="item-count">3 Items</span>
         </div>
 
-        
-        <div class="summary-section">
-            <h2 class="summary-title">Summary</h2>
-            
-            <div class="summary-row">
-                <span class="summary-label" id="items-text">ITEMS 6</span>
-                <span class="summary-price" id="subtotal"></span>
+        <div class="cart-items" id="cart-items">
+          <div class="item-row" data-id="1">
+            <div class="item-image">
+              <img src="images/women-p8.jpg" alt="women1" />
             </div>
-            <div class="summary-row">
-                <span class="summary-label">SHIPPING</span>
-                <span class="summary-price">$5.00</span>
+            <div class="item-details">
+              <div class="item-name">Woman LV Bag</div>
             </div>
-            <div class="delivery-note">Standard Delivery - $5.00</div>
+            <div class="qty-controls">
+              <button class="qty-btn" onclick="updateQty(1, -1)">-</button>
+              <span class="qty-display">1</span>
+              <button class="qty-btn" onclick="updateQty(1, 1)">+</button>
+            </div>
+            <div class="item-price">$2400.00</div>
+            <span class="remove-btn" onclick="removeItem(1)">×</span>
+          </div>
 
-            <div class="promo-section">
-                <label class="promo-label">GIVE CODE</label>
-                <input type="text" class="promo-input" placeholder="Enter your code">
+          <div class="item-row" data-id="2">
+            <div class="item-image">
+              <img src="images/women-p2.jpg" alt="women2" />
             </div>
-
-            <div class="total-section">
-                <div class="total-row">
-                    <span>TOTAL PRICE</span>
-                    <span id="total"></span>
-                </div>
+            <div class="item-details">
+              <div class="item-name">
+                All Ready To Wear Collection for Women
+              </div>
             </div>
+            <div class="qty-controls">
+              <button class="qty-btn" onclick="updateQty(2, -1)">-</button>
+              <span class="qty-display">1</span>
+              <button class="qty-btn" onclick="updateQty(2, 1)">+</button>
+            </div>
+            <div class="item-price">$3200.00</div>
+            <span class="remove-btn" onclick="removeItem(2)">×</span>
+          </div>
 
-            <button class="checkout-btn">CHECKOUT</button>
+          <div class="item-row" data-id="3">
+            <div class="item-image">
+              <img src="images/women-p3.jpg" alt="women3" />
+            </div>
+            <div class="item-details">
+              <div class="item-name">Canvas</div>
+            </div>
+            <div class="qty-controls">
+              <button class="qty-btn" onclick="updateQty(3, -1)">-</button>
+              <span class="qty-display">1</span>
+              <button class="qty-btn" onclick="updateQty(3, 1)">+</button>
+            </div>
+            <div class="item-price">$2310.00</div>
+            <span class="remove-btn" onclick="removeItem(3)">×</span>
+          </div>
+
+          <div class="item-row" data-id="4">
+            <div class="item-image">
+              <img src="images/women-p4.jpg" alt="women4" />
+            </div>
+            <div class="item-details">
+              <div class="item-name">Monogram Towling Jogging Pants</div>
+            </div>
+            <div class="qty-controls">
+              <button class="qty-btn" onclick="updateQty(4, -1)">-</button>
+              <span class="qty-display">1</span>
+              <button class="qty-btn" onclick="updateQty(4, 1)">+</button>
+            </div>
+            <div class="item-price">$1300.00</div>
+            <span class="remove-btn" onclick="removeItem(4)">×</span>
+          </div>
+
+          <div class="item-row" data-id="5">
+            <div class="item-image">
+              <img src="images/women-p5.jpg" alt="women5" />
+            </div>
+            <div class="item-details">
+              <div class="item-name">
+                Louis Vuitton Water Repellent Monogram Parka
+              </div>
+            </div>
+            <div class="qty-controls">
+              <button class="qty-btn" onclick="updateQty(5, -1)">-</button>
+              <span class="qty-display">1</span>
+              <button class="qty-btn" onclick="updateQty(5, 1)">+</button>
+            </div>
+            <div class="item-price">$2500.00</div>
+            <span class="remove-btn" onclick="removeItem(5)">×</span>
+          </div>
+
+          <div class="item-row" data-id="6">
+            <div class="item-image">
+              <img src="images/women-p6.jpg" alt="women6" />
+            </div>
+            <div class="item-details">
+              <div class="item-name">Women LV</div>
+            </div>
+            <div class="qty-controls">
+              <button class="qty-btn" onclick="updateQty(6, -1)">-</button>
+              <span class="qty-display">1</span>
+              <button class="qty-btn" onclick="updateQty(6, 1)">+</button>
+            </div>
+            <div class="item-price">$1300.00</div>
+            <span class="remove-btn" onclick="removeItem(6)">×</span>
+          </div>
         </div>
+
+        <div class="back-btn"><a href="woman-page.html">← Back to shop</a></div>
+      </div>
+
+      <div class="summary-section">
+        <h2 class="summary-title">Summary</h2>
+
+        <div class="summary-row">
+          <span class="summary-label" id="items-text">ITEMS 6</span>
+          <span class="summary-price" id="subtotal"></span>
+        </div>
+        <div class="summary-row">
+          <span class="summary-label">SHIPPING</span>
+          <span class="summary-price">$5.00</span>
+        </div>
+        <div class="delivery-note">Standard Delivery - $5.00</div>
+
+        <div class="promo-section">
+          <label class="promo-label">GIVE CODE</label>
+          <input
+            type="text"
+            class="promo-input"
+            placeholder="Enter your code"
+          />
+        </div>
+
+        <div class="total-section">
+          <div class="total-row">
+            <span>TOTAL PRICE</span>
+            <span id="total"></span>
+          </div>
+        </div>
+
+        <button class="checkout-btn">CHECKOUT</button>
+      </div>
     </div>
 
+    <script src="javascript/cart.js"></script>
     <script>
-        let items = [
-            { 
-                id: 1, 
-                name: 'Louis Vuitton Spring Summer', 
-                price: 2400, 
-                qty: 0, 
-                image: 'images/man1.jpg'
-            },
-            { 
-                id: 2, 
-                name: 'This Made to Order Varsity bloussom from the FW2023', 
-                price: 3200, 
-                qty: 0, 
-                image: 'images/man2.jpg'
-            },
-            { 
-                id: 3, 
-                name: 'Cowboy Set', 
-                price: 2310, 
-                qty: 0, 
-                image: 'images/man3.jpg'
-            },
-            {
-                id: 4,
-                name: 'Louis Vuitton Sandwich Bag',
-                price: 1300,
-                qty: 0,
-                image: 'images/man4.jpg'
-            },
-            {
-                id: 5,
-                name: 'Bagbag',
-                price: 2500,
-                qty: 0,
-                image: 'images/man5.jpg'
-            },
-            {
-                id: 6,
-                name: 'JACKET WITH FLORAL EMBROIDERY',
-                price: 1300,
-                qty: 0,
-                image: 'images/man6.jpg'
-            }
-        ];
-
-        function updateQty(id, change) {
-            const item = items.find(i => i.id === id);
-            if (item) {
-                item.qty = Math.max(0, item.qty + change);
-                updateDisplay();
-            }
+      // Render cart items from localStorage
+      function renderCart() {
+        const cart = window.cartAPI.getCart();
+        const cartItemsDiv = document.getElementById("cart-items");
+        if (!cart || cart.length === 0) {
+          cartItemsDiv.innerHTML =
+            '<div class="empty-cart">Your cart is empty</div>';
+          document.getElementById("item-count").textContent = "0 Items";
+          document.getElementById("items-text").textContent = "ITEMS 0";
+          document.getElementById("subtotal").textContent = "$0.00";
+          document.getElementById("total").textContent = "$5.00";
+          return;
         }
-
-        function removeItem(id) {
-            items = items.filter(i => i.id !== id);
-            const itemElement = document.querySelector(`[data-id="${id}"]`);
-            if (itemElement) {
-                itemElement.remove();
-            }
-            updateDisplay();
-            
-            // Show empty cart message if no items
-            if (items.length === 0) {
-                document.getElementById('cart-items').innerHTML = 
-                    '<div class="empty-cart">Your cart is empty</div>';
-            }
-        }
-
-        function updateDisplay() {
-            const subtotal = items.reduce((sum, item) => sum + item.price * item.qty, 0);
-            const total = subtotal + 5;
-
-            // Update counters and totals
-            document.getElementById('item-count').textContent = `${items.length} Items`;
-            document.getElementById('items-text').textContent = `ITEMS ${items.length}`;
-            document.getElementById('subtotal').textContent = `$${subtotal}.00`;
-            document.getElementById('total').textContent = `$${total}.00`;
-
-            // Update individual item displays
-            items.forEach(item => {
-                const row = document.querySelector(`[data-id="${item.id}"]`);
-                if (row) {
-                    row.querySelector('.qty-display').textContent = item.qty;
-                    row.querySelector('.item-price').textContent = `$${(item.price * item.qty).toFixed(2)}`;
-                }
-            });
-        }
-
-        // Initialize display on page load
-        document.addEventListener('DOMContentLoaded', function() {
-            updateDisplay();
+        let html = "";
+        cart.forEach((item, idx) => {
+          html += `<div class="item-row" data-title="${item.title}">
+                <div class="item-image">
+                    <img src="${item.image}" alt="${item.title}">
+                </div>
+                <div class="item-details">
+                    <div class="item-name">${item.title}</div>
+                </div>
+                <div class="qty-controls">
+                    <button class="qty-btn" onclick="updateQty('${
+                      item.title
+                    }', -1)">-</button>
+                    <span class="qty-display">${item.qty}</span>
+                    <button class="qty-btn" onclick="updateQty('${
+                      item.title
+                    }', 1)">+</button>
+                </div>
+                <div class="item-price">$${(item.price * item.qty).toFixed(
+                  2
+                )}</div>
+                <span class="remove-btn" onclick="removeItem('${
+                  item.title
+                }')">×</span>
+            </div>`;
         });
+        cartItemsDiv.innerHTML = html;
+        document.getElementById(
+          "item-count"
+        ).textContent = `${cart.length} Items`;
+        document.getElementById(
+          "items-text"
+        ).textContent = `ITEMS ${cart.length}`;
+        const subtotal = cart.reduce(
+          (sum, item) => sum + item.price * item.qty,
+          0
+        );
+        document.getElementById("subtotal").textContent = `$${subtotal}.00`;
+        document.getElementById("total").textContent = `$${subtotal + 5}.00`;
+      }
+
+      function updateQty(title, change) {
+        window.cartAPI.updateCartQty(title, change);
+        renderCart();
+      }
+      function removeItem(title) {
+        window.cartAPI.removeFromCart(title);
+        renderCart();
+      }
+      document.addEventListener("DOMContentLoaded", renderCart);
     </script>
-</body>
+  </body>
 </html>
