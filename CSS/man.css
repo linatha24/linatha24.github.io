@@ -60,28 +60,34 @@ body {
 /* Responsive Design for Mobile Devices */
 @media (max-width: 991.98px) {
   .lv-header {
-    flex-direction: column;
-    align-items: stretch;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     padding: 10px 8px;
   }
-  .dropdown {
-    display: block;
-    width: 100%;
-  }
-  .dropdown-menu {
-    width: 100%;
-    display: block;
-    position: static;
-    float: none;
-    background: #fff;
-    box-shadow: none;
-    border: none;
-    margin-bottom: 10px;
-  }
   .logo {
-    text-align: center;
+    order: 1;
+    text-align: left;
     margin: 10px 0;
     font-size: 18px;
+    flex: 1;
+  }
+  .dropdown {
+    order: 2;
+    display: block;
+    width: auto;
+    margin-left: auto;
+  }
+  .dropdown-menu {
+    min-width: 140px;
+    right: 0;
+    left: auto;
+    display: block;
+    position: absolute;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: none;
+    margin-top: 10px;
   }
   .nav {
     display: none !important;
