@@ -72,10 +72,6 @@ body {
     width: auto;
     margin-left: auto;
   }
-  .dropdown {
-    display: block;
-    width: 100%;
-  }
   .dropdown-menu {
     min-width: 140px;
     right: 0;
@@ -87,16 +83,8 @@ body {
     border: none;
     margin-top: 10px;
   }
-  .logo {
-    text-align: center;
-    margin: 10px 0;
-    font-size: 18px;
-  }
   .nav {
     display: none !important;
-  }
-  .category-title {
-    font-size: 1.2rem;
   }
 }
 
