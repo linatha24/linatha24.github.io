@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luxury Fashion for Men & Women | LV Store</title>
+    <title>Louis Vuitton</title>
     <meta name="description" content="Explore fashionable clothing for men and women" />
     <meta name="keywords" content="New collection of Louis Vuitton for men and women " />
     <link rel="stylesheet" href="CSS/style.css">
@@ -38,57 +38,129 @@
             </li>
         </ul>
     </header>
-    <header class="hero-section">
-        <div class="hero-container">
-            <div class="hero-image">
-                <img src="images/hero.jpg" alt="Hero Image">
+    <section class="hero-section" style="margin-bottom:2.5rem;">
+      <div id="lvCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://www.rollingstone.co.uk/wp-content/uploads/sites/2/2024/09/sh04_Felix_RollingStoneUK_StrayKids-3037-1-e1726243862329.jpg" class="d-block w-100" alt="Welcome" style="height:500px;object-fit:cover;">
+            <div class="carousel-caption d-none d-md-block">
+              <h1 style="font-size:2.5rem;font-weight:700;">Discover Your Style</h1>
+              <p style="font-size:1.2rem;">Latest trends in fashion curated just for you.</p>
+              <a href="#shop" class="btn btn-light">Shop Now</a>
             </div>
-            <div class="hero-text">
-                <h1>Discover Your Style</h1>
-                <p>Latest trends in fashion curated just for you.</p>
-                <a href="#shop" class="btn">Shop Now</a>
+          </div>
+          <div class="carousel-item">
+            <img src="	https://eu.louisvuitton.com/images/is/image//conte…l-winter-2025/WOMEN_FW25_HP_Push_DI3.jpg?wid=2400" class="d-block w-100" alt="Women" style="height:500px;object-fit:cover;">
+            <div class="carousel-caption d-none d-md-block">
+              <h1 style="font-size:2.5rem;font-weight:700;">Elegant Women's Collection</h1>
+              <p style="font-size:1.2rem;">Step into luxury and sophistication.</p>
+              <a href="woman-page.html" class="btn btn-light">Shop Women</a>
             </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://www.louisvuitton.com/images/is/image/lv/MEN_BC_PREFALL%20DL2_25_03_DII.jpg?wid=2400" class="d-block w-100" alt="Men" style="height:420px;object-fit:cover;">
+            <div class="carousel-caption d-none d-md-block">
+              <h1 style="font-size:2.5rem;font-weight:700;">Men's New Arrivals</h1>
+              <p style="font-size:1.2rem;">Find your perfect look for every occasion.</p>
+              <a href="man-page.html" class="btn btn-light">Shop Men</a>
+            </div>
+          </div>
         </div>
-    </header>
-    <section class="featured" id="shop">
-        <h2>Feature Collection</h2>
-        <div class="product-card">
-            <img src="images/product1.jpg" alt="Product 1">
-            <h3>Canvas S-Lock</h3>
-            <p>5350$</p>
-            <button onclick="myFunction()">Buy Now</button>
-                <script>
-                    function myFunction() {
-                    alert("Please sign in first");
-                    }
-                </script>
-        </div>
-        <div class="product-card">
-            <img src="images/product2.jpg" alt="Product 2">
-            <h3>Hand Bag</h3>
-            <p>2400$</p>
-            <button onclick="myFunction()">Buy Now</button>
-                <script>
-                    function myFunction() {
-                    alert("Please sign in first");
-                    }
-                </script>
-        </div>
-        <div class="product-card">
-            <img src="images/product3.jpg" alt="Product 3">
-            <h3>Canvas Alma</h3>
-            <p>4500$</p>
-            <button onclick="myFunction()">Buy Now</button>
-                <script>
-                    function myFunction() {
-                    alert("Please sign in first");
-                    }
-                </script>
-        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#lvCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#lvCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
     </section>
-    <footer>
-        <p>&copy; 2025 Louis Vuitton. All rights reserved.</p>
+    <section class="shop-category" style="margin-top:2.5rem;">
+      <h2 style="text-align:center;margin-bottom:2rem;font-weight:700;letter-spacing:1px;">Shop by Category</h2>
+      <p style="text-align:center;max-width:700px;margin:0 auto 2rem auto;font-size:1.1rem;color:#444;">Find your perfect look! Explore our exclusive collections for men and women. Whether you're searching for the latest trends or timeless classics, we have something for every style. Click below to start your fashion journey.</p>
+      <div class="row justify-content-center" style="gap:2rem;">
+        <div class="category-card col-md-5 col-sm-12" style="background:#f8f8f8;border-radius:16px;box-shadow:0 4px 16px rgba(0,0,0,0.06);padding:1.5rem;display:flex;flex-direction:column;align-items:center;transition:box-shadow 0.3s,transform 0.3s;">
+          <img src="images/man1.jpg" alt="Men's Collection" style="width:100%;max-width:420px;height:400px;object-fit:cover;border-radius:12px;">
+          <h3 style="margin-top:1.2rem;font-size:1.3rem;">Men's Collection</h3>
+          <a href="man-page.html" class="btn btn-outline-dark" style="margin-top:0.7rem;width:80%;font-weight:500;">Shop Men</a>
+        </div>
+        <div class="category-card col-md-5 col-sm-12" style="background:#f8f8f8;border-radius:16px;box-shadow:0 4px 16px rgba(0,0,0,0.06);padding:1.5rem;display:flex;flex-direction:column;align-items:center;transition:box-shadow 0.3s,transform 0.3s;">
+          <img src="images/women-p1.jpg" alt="Women's Collection" style="width:100%;max-width:420px;height:400px;object-fit:cover;border-radius:12px;">
+          <h3 style="margin-top:1.2rem;font-size:1.3rem;">Women's Collection</h3>
+          <a href="woman-page.html" class="btn btn-outline-dark" style="margin-top:0.7rem;width:80%;font-weight:500;">Shop Women</a>
+        </div>
+      </div>
+    </section>
+    <section class="featured" id="shop" style="margin-top:3rem;">
+      <h2 style="text-align:center;margin-bottom:2rem;font-weight:700;letter-spacing:1px;">Trending Now Collection</h2>
+      <div class="featured-banner" style="width:100%;margin-bottom:2rem;text-align:center;">
+        <p style="text-align:center;max-width:700px;margin:0 auto;font-size:1.1rem;color:#333;">
+          <span style="font-size:1.3rem;">🔥 Hot picks for the season!</span><br>
+          Discover the most sought-after styles, handpicked by our fashion experts.<br>
+          Shop now and stand out with the latest trends.<br>
+          <span style="color:#444;">Free shipping on orders over $5000!</span>
+        </p>
+      </div>
+      <div class="row justify-content-center" style="gap:2rem;">
+        <div class="product-card home-card col-md-3 col-sm-6" style="background:#fff;border-radius:12px;box-shadow:0 4px 16px rgba(0,0,0,0.08);padding:1rem;transition:box-shadow 0.3s,transform 0.3s;">
+          <img src="images/product1.jpg" alt="Product 1" style="width:100%;height:320px;object-fit:cover;border-radius:8px;">
+          <h3 style="margin-top:1rem;font-size:1.1rem;">Canvas S-Lock</h3>
+          <p style="color:#888;font-size:1rem;">$5350</p>
+          <button class="btn btn-dark buy-btn" style="width:100%;margin-top:0.5rem;">Buy Now</button>
+        </div>
+        <div class="product-card home-card col-md-3 col-sm-6" style="background:#fff;border-radius:12px;box-shadow:0 4px 16px rgba(0,0,0,0.08);padding:1rem;transition:box-shadow 0.3s,transform 0.3s;">
+          <img src="images/product2.jpg" alt="Product 2" style="width:100%;height:320px;object-fit:cover;border-radius:8px;">
+          <h3 style="margin-top:1rem;font-size:1.1rem;">Hand Bag</h3>
+          <p style="color:#888;font-size:1rem;">$2400</p>
+          <button class="btn btn-dark buy-btn" style="width:100%;margin-top:0.5rem;">Buy Now</button>
+        </div>
+        <div class="product-card home-card col-md-3 col-sm-6" style="background:#fff;border-radius:12px;box-shadow:0 4px 16px rgba(0,0,0,0.08);padding:1rem;transition:box-shadow 0.3s,transform 0.3s;">
+          <img src="images/product3.jpg" alt="Product 3" style="width:100%;height:320px;object-fit:cover;border-radius:8px;">
+          <h3 style="margin-top:1rem;font-size:1.1rem;">Canvas Alma</h3>
+          <p style="color:#888;font-size:1rem;">$4500</p>
+          <button class="btn btn-dark buy-btn" style="width:100%;margin-top:0.5rem;">Buy Now</button>
+        </div>
+      </div>
+    </section>
+    </section>
+    <footer style="background:#222;color:#fff;padding:1.5rem 0;text-align:center;margin-top:3rem;">
+      <div style="margin-bottom:0.5rem;font-size:1.1rem;">Follow us on
+        <a href="https://www.instagram.com/louisvuitton/" style="color:#fff;margin:0 0.5rem; text-decoration:none">Instagram</a>
+        <a href="https://www.facebook.com/LouisVuitton/" style="color:#fff;margin:0 0.5rem; text-decoration:none">Facebook</a>
+        <a href="https://eu.louisvuitton.com/eng-e1/homepage" style="color:#fff;margin:0 0.5rem; text-decoration:none">Twitter</a>
+      </div>
+      <p style="margin-bottom:0;">&copy; 2025 Louis Vuitton. All rights reserved.</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Unify Buy Now button logic
+      document.querySelectorAll('.buy-btn').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          alert('Please sign in first');
+        });
+      });
+      // Add hover effect to product cards
+      const style = document.createElement('style');
+      style.innerHTML = `
+        .home-card:hover {
+          box-shadow: 0 8px 32px rgba(0,0,0,0.16);
+          transform: scale(1.04);
+        }
+        .category-card:hover {
+          box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+          transform: scale(1.03);
+        }
+        .featured-banner {
+          animation: fadeIn 1.2s;
+        }
+        @keyframes fadeIn {
+          from { opacity: 0; }
+          to { opacity: 1; }
+        }
+      `;
+      document.head.appendChild(style);
+    </script>
 </body>
 </html>
