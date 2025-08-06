@@ -103,7 +103,7 @@ document.querySelectorAll(".add-to-cart-btn").forEach((btn) => {
     window.cartAPI.addToCart({ title, price, image });
     showToast(`${title} added to cart!`);
     setTimeout(() => {
-      window.location.href = "shopping-cart.html";
+      window.location.href = "men-cart.html";
     }, 800);
   });
 });
