@@ -32,8 +32,6 @@ const product = [
 ];
 let productItem = "";
 for (let i = 0; i < product.length; i++) {
-let productItem = "";
-for (let i = 0; i < product.length; i++) {
   productItem += `<div class="col">
     <div class="card product-card" style="width: 18rem; position: relative;">
       <img src="${product[i].image}" class="card-img-top" alt="${product[i].title}">
@@ -107,4 +105,4 @@ document.querySelectorAll(".add-to-cart-btn").forEach((btn) => {
     }, 800);
   });
 });
-}
+
